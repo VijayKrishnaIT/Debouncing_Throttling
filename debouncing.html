@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <script src="debounce.js"></script>
+  <button id="myid">Pay</button>
+  <script>
+    //debounce function takes 2 parameters one parameter is function, 2nd is timedelay 5sec
+    //debounce implementation
+    // const debounce = (fn, delay) => {
+    //   let timeOut;
+    //   //HOF
+    //   return function (...args) {
+    //     if (timeOut) {
+    //       clearTimeout(timeOut);
+    //     }
+    //     timeOut = setTimeout(() => {
+    //       fn(...args);
+    //     }, delay);
+    //   };
+    // };
+    //click the Pay button use document.getElementById
+    //addEventListener click button dynamically
+    //debounce is not predefined function.
+    document.getElementById("myid").addEventListener(
+      "click",
+      debounce((event) => {
+        console.log("Payment Success");
+      }, 5000)
+    );
+    // document.getElementById("myid").addEventListener("click", () => {
+    //   console.log("Pay Clicked");
+    // });
+  </script>
+</html>
